@@ -5,22 +5,28 @@ import useSound from 'use-sound';
 import styled, { keyframes } from 'styled-components';
 
 
-const Target = styled("div")((props: any) => ({
+interface TargetProps {
+    left?: any;
+    top?: any;
+}
+
+
+const Target = styled("div")<TargetProps>((props) => ({
     "@keyframes movement": {
         "0%": {
-            left: `${props.left || '150px'};`,
-            top: `${props.top || '0px'};`,
+            left: props.left || "150px",
+            top: props.top || "0px",
         },
 
         "50%": {
-            left: `${`${parseFloat(props.left) + 4}%` || '150px'};`,
-            top: `${props.top || '0px'};`,
+            left: `${parseFloat(props.left) + 4}%` || "150px",
+            top: props.top || "0px",
         },
 
         "100%": {
-            left: `${props.left || '150px'};`,
-            top: `${props.top || '0px'};`,
-        }
+            left: props.left || "150px",
+            top: props.top || "0px",
+        },
     },
     width: "60px",
     height: "60px",
@@ -32,7 +38,6 @@ const Target = styled("div")((props: any) => ({
     top: "10%",
     animation: "movement 1s ease infinite",
 }));
-
 
 
 function index(props: any) {

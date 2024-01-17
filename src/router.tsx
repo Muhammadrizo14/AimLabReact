@@ -1,7 +1,6 @@
 import {
     createBrowserRouter,
     Link,
-    RouterProvider,
 } from "react-router-dom";
 import Home from './Pages/Home'
 import PlayGraund from './Pages/PlayGraund'
