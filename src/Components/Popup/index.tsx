@@ -1,4 +1,4 @@
-import styles from './styles.module.scss'
+import styles from './style.module.scss'
 
 type Props = {
     children: string | JSX.Element | JSX.Element[]
