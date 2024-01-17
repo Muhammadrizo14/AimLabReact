@@ -5,7 +5,7 @@ import useSound from 'use-sound';
 import styled, { keyframes } from 'styled-components';
 
 
-const Target = styled("div")((props) => ({
+const Target = styled("div")((props: any) => ({
     "@keyframes movement": {
         "0%": {
             left: `${props.left || '150px'};`,

@@ -8,7 +8,7 @@ interface IProps {
 
 
 const index: React.FC<IProps> = ({ checkResults }) => {
-    const [timer, setTimer] = useState<number>(10000)
+    const [timer, setTimer] = useState<number>(5)
 
 
 
