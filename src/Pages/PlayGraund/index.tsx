@@ -124,7 +124,7 @@ l-151 -633 0 -284 0 -284 -72 -148 -73 -149 -3 -815 c-4 -931 10 -1626 33
                             setCurrentPatrons(0),
                             setTargetKilled(0)
                         )}
-                        style={{ marginTop: `40px`, marginBottom: '🎧 Be' }}
+                        style={{ marginTop: `40px`, marginBottom: '10px' }}
                     >
                         Click to play again or press X!
                     </button>
