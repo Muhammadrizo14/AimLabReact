@@ -103,6 +103,7 @@ l-151 -633 0 -284 0 -284 -72 -148 -73 -149 -3 -815 c-4 -931 10 -1626 33
                 <span>{targetKilled}</span>
             </h3>
             <Target targetKilled={() => setTargetKilled(prev => prev + 1)} />
+            <Target targetKilled={() => setTargetKilled(prev => prev + 1)} />
             {start && (
                 <Popup>
                     <h3>To start the game click to Play Or Press X</h3>

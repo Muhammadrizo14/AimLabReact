@@ -12,30 +12,31 @@ interface TargetProps {
 
 
 const Target = styled("div")<TargetProps>((props) => ({
-    "@keyframes movement": {
-        "0%": {
-            left: props.left || "150px",
-            top: props.top || "0px",
-        },
+    // "@keyframes movement": {
+    //     "0%": {
+    //         left: props.left || "",
+    //         top: props.top || "0px",
+    //     },
 
-        "50%": {
-            left: `${parseFloat(props.left) + 4}%` || "150px",
-            top: props.top || "0px",
-        },
+    //     "50%": {
+    //         left: `${parseFloat(props?.left) + 4}%` || "",
+    //         top: props.top || "0px",
+    //     },
 
-        "100%": {
-            left: props.left || "150px",
-            top: props.top || "0px",
-        },
-    },
+    //     "100%": {
+    //         left: props.left || "",
+    //         top: props.top || "0px",
+    //     },
+    // },
+    left: `${parseFloat(props?.left) + 4}%`,
+    top: props.top,
     width: "60px",
     height: "60px",
+    zIndex: 1,
     backgroundColor: "orange",
     borderRadius: "8%",
     border: "1px solid rgb(136, 91, 8)",
     position: "relative",
-    left: "60%",
-    top: "10%",
     animation: "movement 1s ease infinite",
 }));
 
@@ -57,7 +58,7 @@ function index(props: any) {
     return (
         <div className={styles.targetWrapp}>
             <Target
-                left={`${parseFloat(position[1]) + 2}%`}
+                left={position[1]}
                 top={`${parseFloat(position[0])}%`}
                 onClick={() => changePosition()}
             />
