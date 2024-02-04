@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './style.module.scss'
+import {useSelector} from "react-redux";
 
 
 interface IProps {
@@ -8,7 +9,7 @@ interface IProps {
 
 
 const index: React.FC<IProps> = ({ checkResults }) => {
-    const [timer, setTimer] = useState<number>(400000)
+    const [timer, setTimer] = useState<number>(useSelector((state) => state.settings.timeTraining))
 
 
 

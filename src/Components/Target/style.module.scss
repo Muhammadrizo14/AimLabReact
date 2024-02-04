@@ -6,6 +6,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+  
 
     .target {
         width: 60px;
@@ -20,3 +21,8 @@
 }
 
 
+@keyframes movement {
+  0% {
+    left:0;
+  }
+}
