@@ -1,6 +1,5 @@
 import styles from './style.module.scss'
 import Navbar from '../../Components/Navbar'
-import { Analytics } from '@vercel/analytics/react';
 
 
 function index() {
@@ -18,7 +17,6 @@ function index() {
         </a>
         <p className={styles.author}>Created by <a href="https://t.me/ubuntuous">@ubuntuous</a></p>
       </footer>
-      <Analytics />
     </div>
   );
 }
