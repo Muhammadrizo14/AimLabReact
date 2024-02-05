@@ -107,7 +107,7 @@ l-151 -633 0 -284 0 -284 -72 -148 -73 -149 -3 -815 c-4 -931 10 -1626 33
       </h3>
 
 
-      {Array.apply(null, Array(useSelector((state) => state.settings.countTarget))).map((val, idx) => (
+      {Array.apply(null, Array(useSelector((state:any) => state.settings.countTarget))).map((val, idx) => (
         <div className={styles.targetWrap}>
           <Target key={idx} targetKilled={() => setTargetKilled(prev => prev + 1)}/>
         </div>

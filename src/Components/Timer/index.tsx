@@ -9,7 +9,7 @@ interface IProps {
 
 
 const index: React.FC<IProps> = ({ checkResults }) => {
-    const [timer, setTimer] = useState<number>(useSelector((state) => state.settings.timeTraining))
+    const [timer, setTimer] = useState<number>(useSelector((state:any) => state.settings.timeTraining))
 
 
 

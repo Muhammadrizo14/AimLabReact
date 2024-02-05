@@ -5,9 +5,9 @@ import {useDispatch, useSelector} from "react-redux";
 import {trainingTime, countTarget, movementTarget} from "../../store/settingSlice.ts";
 
 function index() {
-  const [movement, setMovement] = useState<boolean>(useSelector((state) => state.settings.movement))
-  const [timeTraining, setTimeTraining] = useState<number>(useSelector((state) => state.settings.timeTraining))
-  const [countTargets, setCountTarget] = useState<number>(useSelector((state) => state.settings.countTarget))
+  const [movement, setMovement] = useState(useSelector((state:any) => state.settings.movement))
+  const [timeTraining, setTimeTraining] = useState<number>(useSelector((state:any) => state.settings.timeTraining))
+  const [countTargets, setCountTarget] = useState<number>(useSelector((state:any) => state.settings.countTarget))
   const dispatch = useDispatch();
 
   const apply = ()=> {
@@ -32,7 +32,7 @@ function index() {
       </div>
       <div className={styles.targetMovement}>
         <label>Would you like to target should move?</label>
-        <div className={`${styles.btn} ${movement && styles.active}`} onClick={() => setMovement(prev => !prev)}>
+        <div className={`${styles.btn} ${movement && styles.active}`} onClick={() => setMovement((prev: boolean) => !prev)}>
           <div className={styles.btnSwitch}></div>
         </div>
       </div>
