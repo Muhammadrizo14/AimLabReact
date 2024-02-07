@@ -5,12 +5,14 @@ import Popup from '../../Components/Popup'
 import Timer from '../../Components/Timer'
 import {Link} from 'react-router-dom'
 import {useDispatch, useSelector} from "react-redux";
+import timer from "../../Components/Timer";
 
 function index() {
   const [currentPatrons, setCurrentPatrons] = useState(0)
   const [targetKilled, setTargetKilled] = useState(0)
   const [start, setStart] = useState(true)
   const [result, setResult] = useState(false)
+  const [time, setTime] = useState<number>(useSelector((state:any) => state.settings.timeTraining))
 
 
   const fire = () => {
@@ -115,7 +117,7 @@ l-151 -633 0 -284 0 -284 -72 -148 -73 -149 -3 -815 c-4 -931 10 -1626 33
 
       {start && (
         <Popup>
-          <h3>To start the game click to Play Or Press X</h3>
+          <h3>Click to Play Or Press X</h3>
 
           <button onClick={() => setStart(false)} style={{marginTop: `40px`}}>Play</button>
         </Popup>
@@ -124,9 +126,12 @@ l-151 -633 0 -284 0 -284 -72 -148 -73 -149 -3 -815 c-4 -931 10 -1626 33
       {result && (
         <Popup>
           <h3>Results</h3>
+          <p>Time: {time}</p>
           <p>Bullet spent: {currentPatrons}</p>
           <p>Killed: {targetKilled}</p>
           <p>Missed: {currentPatrons - targetKilled}</p>
+          <p>Accuracy: {((targetKilled / currentPatrons) * 100).toFixed()}%</p>
+          <p>Speed: {((targetKilled/time)).toFixed(2)} t/s</p>
           <button
             onClick={() => (
               setStart(false),
@@ -136,7 +141,7 @@ l-151 -633 0 -284 0 -284 -72 -148 -73 -149 -3 -815 c-4 -931 10 -1626 33
             )}
             style={{marginTop: `40px`, marginBottom: '10px'}}
           >
-            Click to play again or press X!
+            Click to play again
           </button>
           <br/>
           <Link to='/'>Home</Link>

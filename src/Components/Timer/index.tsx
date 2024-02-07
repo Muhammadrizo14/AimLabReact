@@ -15,7 +15,6 @@ const index: React.FC<IProps> = ({ checkResults }) => {
 
     useEffect(() => {
         if (timer <= 0) {
-            console.log('Timer reached 0!');
             checkResults()
             return;
         }

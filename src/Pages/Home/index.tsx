@@ -3,8 +3,13 @@ import Navbar from '../../Components/Navbar'
 
 function index() {
   return (
-    <div className={styles.main}>
+    <div className={styles.home}>
       <Navbar />
+
+      <main>
+        <h1>AIM trainer</h1>
+      </main>
+
       <footer>
         <a className={styles.github} href="https://github.com/Muhammadrizo14/AimLabReact">
           <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
